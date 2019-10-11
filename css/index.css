@@ -1,0 +1,528 @@
+ul,li{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+a{
+    display: block;
+}
+.Mainheader{
+    border-bottom: 1px solid #dedede;
+    position: sticky;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    background: #fff;
+}
+.header{
+    width: 1160px;
+    height: 80px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    z-index: 200;
+    background: #fff;
+}
+.logo{
+    display: flex;
+    width: 240px;
+    align-items: center;
+    justify-content: center;
+}
+.logo img{
+    height: 40px;
+    width: 80px;
+}
+.header .nav{
+    display: block;
+    height: 80px;
+    line-height: 80px;
+    text-align: center;
+    color: #333333;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+.nav .txt{
+    margin: 0 15px;
+}
+.nav1{
+    width: 325px;
+    display: flex;
+    justify-content: center;
+}
+.nav .icon-down{
+    font-size: 8px;
+}
+.nav .downlist{
+    width: 100%;
+    margin: 0;
+}
+
+.libox{
+    list-style: none;
+    width: 100%;
+    background: #fff;
+}
+.lis{
+    display: none;
+}
+.libox li{
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;	
+}
+.libox li a{
+    color: #000;
+    text-decoration: none;
+}
+.libox li:hover a{
+    color: #e6d6c6;
+}
+.nav1 .icon-search_2{
+    font-size: 16px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    cursor: pointer;
+}
+.nav1{
+    display: flex;
+    height: 80px;
+    align-items: center;
+}
+.nav1 a{
+    color: #333333;
+    text-decoration: none;
+}
+ .search {
+    height: 20px;
+    width: 120px;
+    position: relative;
+    
+}
+.search1{
+   width: 100%;
+   height: 100%;
+   padding-right: 14px;
+   position: absolute;
+   top: 0;
+   display: none;
+   /* display: none; */
+}
+
+.nav:hover{
+    background: #e6d6c6;
+}
+.showlist{
+    width: 100%;
+    height: 250px;
+    background: #fff;
+    position: fixed;
+    top: 80px;
+    left: 0;
+    z-index:1;
+    display: none;
+}
+.showlist .mainList{
+    width: 1160px;
+    margin: 0 auto;
+}
+.showlist .cls{
+    margin-left: 255px;
+}
+.showlist .cls li{
+    width: 100%;
+    text-align: left;
+}
+/* banner */
+/* .banner{
+    width: 100%;
+} */
+.tit{
+    font-weight:bolder;
+    text-align: center;
+    color: #000;
+    margin:0;
+}
+ .tit1{
+    font-size: 14px;
+    text-align: center;
+    height: 35px;
+    line-height: 35px;
+}
+/* tuijian */
+.tuijian{
+    width: 100%;
+    padding-top: 50px;
+}
+.cont{
+    width: 1140px;
+    margin: 0 auto;
+    position: relative;
+}
+.icon-left,.icon-right{
+    color: rgb(218, 218, 218);
+}
+.icon-left:hover{
+    color: rgb(180, 180, 180);
+}
+.icon-right:hover{
+    color: rgb(180, 180, 180);
+}
+.show{
+    position: relative;
+    width: 100%;
+    height: 365px;
+    overflow:hidden;
+}
+.icon-left{
+    position: absolute;
+    left: -40px;
+    top: 200px;
+    cursor: pointer;
+}
+.icon-right{
+    position: absolute;
+    left:  1160px;
+    top: 200px;
+    cursor: pointer;
+}
+.things{
+    display: flex;
+    height: 100%;
+    position: absolute;
+    /*left: 0;*/
+    top: 0;
+}
+.things li{
+    width: 285px;
+    height: 100%;
+}
+.things li .imgs{
+    width: 100%;
+    height: 292px;
+    background: #fff;
+    display: block;
+}
+.things li img{
+    height: 275px;
+    width: 275px;
+    display: block;
+    margin: 0 auto;
+}
+.things li .shoppinginfo{
+    text-decoration: none;
+    color: #000;
+    text-align: center;
+}
+.shoppinginfo h5{
+    margin: 10px auto 4px;
+    font-size: 14px;
+    font-weight: bold;
+}
+.shoppinginfo .price{
+    color:  #db2e2e;
+}
+.content1{
+    padding-top: 50px;
+}
+.adv{
+    width: 1140px;
+    height: 380px;
+    margin: 0 auto;
+    display: flex;
+}
+.adv a{
+    display: block;
+    text-decoration: none;
+}
+.adv .lef{
+    width: 680px;
+    height: 380px;
+    overflow: hidden;
+    position: relative;
+}
+.bord{
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 10;
+    border:3px solid #fff;
+}
+.adv .lef img{
+    width:100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.adv .rig{
+    width:460px;
+    height: 100%;
+}
+.adv .rig img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+.adv .rig1{
+    width: 450px;
+    height: 185px;
+    margin-left: 10px;
+    overflow: hidden;
+    position: relative;
+}
+.adv .rig2{
+    width: 450px;
+    height: 185px;
+    margin-left: 10px;
+    margin-top: 10px;
+    overflow: hidden;
+    position: relative;
+}
+.content2{
+    padding-top: 50px;
+    padding-bottom: 47px;
+}
+.about{
+    width: 1140px;
+    margin: 0 auto;
+}
+.about .top{
+    width: 1140px;
+    height:358px;
+    display: flex;
+}
+.about .top .lefBox{
+    width: 504px;
+    height: 358px;
+    margin-right: 14px;
+    overflow: hidden;
+    position: relative;
+}
+.about .top .centerBox{
+    width: 411px;
+    height: 358px;
+}
+.top img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+.centerBox a{
+    width: 100%;
+    overflow: hidden;
+    height: 172px;
+    position: relative;
+}
+.centerBox .ctop{
+    margin-bottom: 14px;
+}
+.about .top .rigBox{
+    width: 197px;
+    height: 358px;
+    margin-left: 14px;
+    overflow: hidden;
+    position: relative;
+}
+.bottom{
+    display: flex;
+    margin-top: 20px;
+    justify-content: space-between;
+}
+.bottom li{
+    width: 210px;
+    height: 92px;
+    margin-bottom: 28px;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #e8e8e8;
+    
+}
+.bottom li a{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.bottom li a img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.content3{
+    background:#f5f5f5;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.select{
+    width: 1140px;
+    height: 432px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+.select li{
+    width: 276px;
+    height: 432px;
+    position: relative;
+    background:#fff;
+}
+.hd{
+    width: 276px;
+    height: 280px;
+    overflow: hidden;
+    position: relative;
+
+}
+.hd img{
+    width: 276px;
+    height: 276px;
+    position: absolute;
+}
+.info{
+    height: 164px;
+    width: 266px;
+    padding: 15px 20px;
+    background: #fff;
+    position: absolute;
+    left: 5px;
+    bottom: 0;
+}
+.info .tt{
+    font-weight: bold;
+    color: #333333;
+    font-size: 14px;
+}
+.info .thispr{
+    color: #c78a49;
+    font-size: 14px;
+    float: right;
+}
+.info .midbox{
+    height: 80px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.info .midbox p{
+    margin:  12px 0;
+    font-size: 12px;
+    color: #4d4d4d;
+}
+.info .bbox{
+    margin-top: 12px;
+    font-size: 13px;
+    color: #777;
+}
+/*guding*/
+.fixed{
+    position: fixed;
+    right: 20px;
+    bottom: 100px;
+}
+.weichat .icon-weichat{
+    font-size: 36px;
+}
+.weichat img{
+    position: absolute;
+    left: -120px;
+    top: -50px;
+    height: 110px;
+    width: 110px;
+    display: none;
+}
+.weichat,.maodian{
+    position: relative;
+    width: 50px;
+    height: 50px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0,0,0,.5);
+}
+.weichat:hover .im{
+    display: block;
+}
+.maodian a{
+    text-decoration: none;
+    color: #000;
+}
+/*footer*/
+.footer{
+    background:#faf8f8;
+}
+.ftop{
+    width: 1140px;
+    height: 200px;
+    padding-top: 60px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+.ftop a{
+    text-decoration: none;
+    font-size: 14px;
+    color: #333333;
+}
+.ftop a:hover{
+    color:  #c78a49;
+}
+.ftop .fLogo{
+    width: 307px;
+    height: 30px;
+    text-align: center;
+}
+.ftop .fLogo img{
+    height: 30px;
+}
+.fNav{
+    display: flex;
+    width: 470px;
+    height: 30px;
+    justify-content: space-between;
+}
+.fNav li{
+    text-align: center;
+}
+.fContect{
+    width: 274px;
+    height: 140px;
+    display: flex;
+    justify-content: space-between;
+
+}
+.fContect li img{
+    width: 120px;
+    height: 120px;
+}
+.fContect li a{
+    text-align: center;
+    display: block;
+}
+.fbot{
+    height: 112px;
+    border-top: 1px solid #e6e6e6;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.fcontent{
+    width: 1140px;
+    height: 100%;
+    margin: 0 auto;
+}
+.fcontent .fl{
+    line-height: 31px;
+    color: #a8a8a8;;
+} 
+.fcontent p{
+    display: flex;
+
+}
