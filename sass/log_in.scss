@@ -85,3 +85,28 @@
 .lianxi .icon-QQ1:hover{
 	color: #2f94e7;
 }
+.mini{
+	position: relative;
+}
+.ale {
+	width: 60px;
+	height:30px;
+	border-radius: 3px;
+	line-height: 30px;
+	text-align: center;
+	color: #fff;
+	background: #242323;
+	font-size: 12px;
+	position: absolute;
+	top: -35px;
+	left: -15px;
+	display: none;
+}
+.three{
+	display: block;
+	width: 0;
+	height: 0;
+	border: 5px solid transparent;
+	border-top-color: #242323;
+	margin: 0 auto;
+}

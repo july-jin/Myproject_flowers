@@ -1,12 +1,4 @@
-<!doctype html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>登录</title>
-	<link rel="stylesheet" href="css/log_in.css">
-</head>
-<body>
-	<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -15,6 +7,7 @@
     <title>花草间感悟生活之美</title>
     <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/index.css">
+	<link rel="stylesheet" href="css/log_in.css">
     <link rel="stylesheet" href="css/iconfont.css">
 </head>
 <body>
@@ -29,7 +22,7 @@
                     </span>
                 </p>
             </div>
-            <a class="nav" href="#">
+            <a class="nav" href="index.html">
                 <span class="txt">首页</span>
             </a>
             <div class="nav cf" href="#">
@@ -102,9 +95,27 @@
                 <span class="fgtt">社交账号登录</span>
             </div>
             <div class="lianxi">
-                <span class="iconfont icon-weichat icon" title="微信登录" data-container="body" data-toggle="popover" data-placement="top"></span>
-                <span class="iconfont icon-QQ1 icon" title="QQ登录"></span>
-                <span class="iconfont icon-weibo1" title="微博登录"></span>
+                <div class="mini">
+                    <div class="ale">
+                            微信登录
+                        <span class="three"></span>
+                    </div>
+                    <span class="iconfont icon-weichat icon" title="微信登录"></span>
+                </div>
+                <div class="mini">
+                    <div class="ale">
+                            微信登录
+                        <span class="three"></span>
+                    </div>
+                    <span class="iconfont icon-QQ1 icon" title="微信登录"></span>
+                </div>
+                <div class="mini">
+                    <div class="ale">
+                            微信登录
+                        <span class="three"></span>
+                    </div>
+                    <span class="iconfont icon-weibo1" title="微信登录"></span>
+                </div>
             </div>
     	</div>
     </div>
@@ -152,10 +163,11 @@
 <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
 <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <script>
-   
-
-    
-    </script>
-    
-</body>
-</html>
+    $(".mini").each(function(){
+        $(this).mouseenter(function(){
+            $(this).children(".ale").slideDown(100);
+        }).mouseleave(function(){
+            $(this).children(".ale").slideUp(100);
+        });
+    })
+</script>
