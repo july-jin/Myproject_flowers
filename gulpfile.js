@@ -12,6 +12,10 @@ const sass=require("gulp-sass");
             gulp.src('*.html')
             .pipe(gulp.dest('D:\\phpStudy\\WWW\\A-Myproject'));
         })
+        gulp.watch("*.php",async ()=>{
+            gulp.src('*.php')
+            .pipe(gulp.dest('D:\\phpStudy\\WWW\\A-Myproject'));
+        })
         gulp.watch("sass/**/*",async ()=>{
             gulp.src('sass/**/*')
             .pipe(sass())

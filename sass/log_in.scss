@@ -1,3 +1,10 @@
+@mixin minThree{
+	display: block;
+	width: 0;
+	height: 0;
+	border: 5px solid transparent;
+	border-top-color: #242323;
+}
 .log_in{
 	background:url(../img/logBg.png);
 	background-repeat: no-repeat;
@@ -11,21 +18,41 @@
     border-radius: 3px;
 	padding: 30px 40px;
 	background: #fff;
+	.dl{
+		margin-bottom: 24px;
+	}
+	.biao{
+		font-size: 16px;
+		height: 42px;
+		line-height: 40px;
+		margin-bottom: 21px;
+	}
+	.biao2{
+		margin-bottom: 10px;
+	}
 }
-.mainbox .dl{
-	margin-bottom: 24px;
+.inpBox{
+	position: relative;
 }
-.log_in .mainbox .biao{
-	font-size: 16px;
-    height: 42px;
-	line-height: 40px;
-	margin-bottom: 21px;
-}
-.log_in .mainbox .biao1{
-	margin-bottom: 21px;
-}
-.log_in .mainbox .biao2{
+.log_in .alebox{
+	height: 25px;
+	display: inline-block;
+	padding: 0 5px;
+	border-radius: 5px;
+	line-height: 25px;
 	margin-bottom: 10px;
+	color: #fff;
+	font-size: 12px;
+	background: #242323;
+	opacity: .5;
+	position: absolute;
+	right: 0;
+	bottom: 40px;
+	display: none;
+}
+.san{
+	@include minThree;
+	margin-left: 20%;
 }
 .password{
 	height: 30px;
@@ -114,10 +141,6 @@
 	display: none;
 }
 .three{
-	display: block;
-	width: 0;
-	height: 0;
-	border: 5px solid transparent;
-	border-top-color: #242323;
-	margin: 0 auto;
+	@include minThree;
+	margin:0 auto;
 }

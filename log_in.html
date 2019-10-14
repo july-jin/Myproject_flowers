@@ -84,8 +84,8 @@
     <div class="log_in">
     	<div class="mainbox">
             <h4 class="dl">登录</h4>
-            <input type="text" class="form-control biao biao1" id="name" placeholder="手机/邮箱">
-            <input type="text" class="form-control biao biao2" id="name" placeholder="登录密码">
+            <input type="text" class="form-control biao biao1" id="username" placeholder="手机/邮箱">
+            <input type="text" class="form-control biao biao2" id="userPass" placeholder="登录密码">
             <div class="password">
                 <a href="zhuce.html">注册</a>
                 <a href="">忘记密码</a>
@@ -170,4 +170,30 @@
             $(this).children(".ale").slideUp(100);
         });
     })
+
+
+
+
+    $("#fat-btn").onclick=function(){
+        let Ajx=new XMLHttpRequest();
+
+        Ajx.open("post","usercheck.php",true);
+
+        Ajx.onreadystatechange=function(){
+            if(Ajx.readyState==4&&Ajx.status==200){
+                if(Ajx.responseText=="1"){
+                    addCookie("username",$("#username").value,3);
+                    location.href="index.html";
+                }else{
+                    alert("您输入的账号或密码不正确！")
+                }
+            }
+        }
+        Ajx.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+
+        let sendstr=`username=${$("#username").value}&userId=${$("#userId").value}&userPass=${$("#userPass").value}`;
+        console.log(sendstr);
+        Ajx.send(sendstr);
+
+    }
 </script>
