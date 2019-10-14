@@ -89,14 +89,14 @@
                     <span class="neir">请输入手机号</span>
                     <span class="san"></span>
                 </div>
-                <input type="text" class="form-control biao biao1" id="name" placeholder="手机/邮箱">
+                <input type="text" class="form-control biao biao1" id="userId" placeholder="手机/邮箱">
             </div>
             <div class="inpBox">
                 <div class="alebox">
                     <span class="neir">请输入手机号</span>
                     <span class="san"></span>
                 </div>
-                <input type="text" class="form-control biao biao1" id="name" placeholder="设置密码">
+                <input type="text" class="form-control biao biao1" id="userPass" placeholder="设置密码">
             </div>
             <div class="inpBox">
                 <div class="alebox">
@@ -134,10 +134,12 @@
                     </div>
                     <span class="iconfont icon-weibo1" title="微信登录"></span>
                 </div>
-            </div>
+            </div> 
+            <p id="messageBox"></p>
     	</div>
     </div>
-    
+   
+
     <!-- footer -->
     <div class="footer">
         <div class="ftop">
@@ -177,6 +179,7 @@
 </body>
 </html>
 <script src="js/jquery-1.8.3.min.js"></script>
+<script src="js/cookieTools.js"></script>
 <script src="js/jquery-flowers.js"></script>
 <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
 <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -188,4 +191,35 @@
             $(this).children(".ale").slideUp(100);
         });
     })
+
+
+    $("#fat-btn").click ( function(){
+    //1、
+    let xhr = new XMLHttpRequest();
+
+    xhr.open("post","registr.php",true);
+
+    xhr.onreadystatechange = function(){
+        if(xhr.readyState==4 && xhr.status==200){
+            if(xhr.responseText=="-1"){
+                $("#messageBox").css({ color: "red",fontSize:"18px",textAlign:"center"});
+                $("#messageBox").text("×抱歉！该用户名已被人使用");
+            }else if(xhr.responseText=="0"){
+                $("#messageBox").css({ color: "red",fontSize:"18px",textAlign:"center"});
+                $("#messageBox").text("×抱歉！注册失败");
+            }else if(xhr.responseText=="1"){
+                $("#messageBox").css({color: "#000",fontSize:"18px",textAlign:"center"});
+                $("#messageBox").html("注册成功，请<a href='log_in.html'>登录</a>");
+            } 
+        }
+    }
+    //post方式：设置请求头
+    xhr.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+    //post方式：把传给服务器端数据（键值对）放在send函数的参数里。
+    let sendstr = `userId=${$("#userId").val()}&userpass=${$("#userPass").val()}`;
+    console.log(sendstr);
+    xhr.send(sendstr);
+
+})
+
 </script>

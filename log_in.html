@@ -84,7 +84,7 @@
     <div class="log_in">
     	<div class="mainbox">
             <h4 class="dl">登录</h4>
-            <input type="text" class="form-control biao biao1" id="username" placeholder="手机/邮箱">
+            <input type="text" class="form-control biao biao1" id="userId" placeholder="手机/邮箱">
             <input type="text" class="form-control biao biao2" id="userPass" placeholder="登录密码">
             <div class="password">
                 <a href="zhuce.html">注册</a>
@@ -160,6 +160,7 @@
 </html>
 <script src="js/jquery-1.8.3.min.js"></script>
 <script src="js/jquery-flowers.js"></script>
+<script src="js/cookieTools.js"></script>
 <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
 <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <script>
@@ -174,15 +175,15 @@
 
 
 
-    $("#fat-btn").onclick=function(){
+    $("#fat-btn").click(function(){
         let Ajx=new XMLHttpRequest();
 
-        Ajx.open("post","usercheck.php",true);
+        Ajx.open("post","checkuser.php",true);
 
         Ajx.onreadystatechange=function(){
             if(Ajx.readyState==4&&Ajx.status==200){
                 if(Ajx.responseText=="1"){
-                    addCookie("username",$("#username").value,3);
+                    addCookie("#userId",$("#userId").val(),3);
                     location.href="index.html";
                 }else{
                     alert("您输入的账号或密码不正确！")
@@ -191,9 +192,9 @@
         }
         Ajx.setRequestHeader("Content-type","application/x-www-form-urlencoded");
 
-        let sendstr=`username=${$("#username").value}&userId=${$("#userId").value}&userPass=${$("#userPass").value}`;
+        let sendstr=`userId=${$("#userId").val()}&userPass=${$("#userPass").val()}`;
         console.log(sendstr);
         Ajx.send(sendstr);
 
-    }
+    })
 </script>
